@@ -8,7 +8,7 @@ require('discord-buttons')(client);
 client.on('ready', async () => console.log('ready'));
  
 client.on('message', async (m) => {
-  var prefix = "?";
+  var prefix = "prefix";
   if (m.content.indexOf(prefix) !== 0) return;
   var args = m.content.slice(prefix.length).trim().split(/ +/g);
   var command = args.shift();
@@ -29,4 +29,4 @@ client.on('clickButton', async (button) => {
   require('./events/clickButton').run(client, button);
 });
 
-client.login('ODU1NDMzNDM1OTEyMDc3MzMy.YMyaeA.o0T9mntImU_CO9WcCttftod6b7E');
+client.login('token');
